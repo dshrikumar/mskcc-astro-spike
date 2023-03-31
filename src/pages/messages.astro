@@ -1,0 +1,14 @@
+---
+import Messages from 'components/Messages';
+import SideNav from 'components/SideNav';
+import Nav from '../components/Nav';
+import Layout from '../layouts/Layout.astro';
+
+---
+
+<Layout title="Cases">
+	<Nav client:load/>
+	<SideNav activeMenu="messages"  client:load/>
+	<Messages client:load />
+</Layout>
+

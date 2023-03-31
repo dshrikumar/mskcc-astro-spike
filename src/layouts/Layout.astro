@@ -4,6 +4,7 @@ export interface Props {
 }
 
 const { title } = Astro.props;
+
 ---
 
 <!DOCTYPE html>
@@ -32,4 +33,12 @@ const { title } = Astro.props;
 		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
 			Bitstream Vera Sans Mono, Courier New, monospace;
 	}
+	* {
+    font-size: 16px;
+	}
+
+	.message-card  >  div{ 
+		padding: 0px;
+	}
+
 </style>

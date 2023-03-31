@@ -1,0 +1,15 @@
+---
+import Cases from 'components/Cases/Cases';
+import SideNav from 'components/SideNav';
+import Nav from '../components/Nav';
+import Layout from '../layouts/Layout.astro';
+
+
+---
+
+<Layout title="Cases">
+	<Nav client:load/>
+	<SideNav activeMenu="cases" client:load/>
+	<Cases client:load />
+</Layout>
+

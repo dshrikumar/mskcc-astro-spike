@@ -1,0 +1,18 @@
+---
+import Home from 'components/Home/Home';
+import SideNav from 'components/SideNav';
+import Nav from '../components/Nav';
+import Layout from '../layouts/Layout.astro';
+
+
+Astro.response.headers.set('Cache-Control', 'max-age=86400, must-revalidate');
+
+
+---
+
+<Layout title="Home">
+	<Nav client:load/>
+	<SideNav activeMenu={'home'} client:load/>
+	<Home client:load />
+</Layout>
+
