@@ -11,10 +11,8 @@
   },
   "dependencies": {
     "@astrojs/cloudflare": "^6.2.2",
-    "@astrojs/netlify": "^2.2.0",
     "@astrojs/react": "^2.1.0",
     "@astrojs/tailwind": "^3.1.1",
-    "@astrojs/vercel": "^3.2.1",
     "@nanostores/react": "^0.4.1",
     "@types/react": "^18.0.31",
     "@types/react-dom": "^18.0.11",

@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import { Sidebar } from 'flowbite-react'
-import { AiFillHome, AiOutlineFileText } from 'react-icons/ai/index'
-import { TbMessages } from 'react-icons/tb/index'
-import { MdOutlinePersonOutline } from 'react-icons/md/index'
-import {IoHelpCircleOutline} from 'react-icons/io5/index'
-import {FiLogOut} from 'react-icons/fi/index'
+// import { AiFillHome, AiOutlineFileText } from 'react-icons/ai/index'
+// import { TbMessages } from 'react-icons/tb/index'
+// import { MdOutlinePersonOutline } from 'react-icons/md/index'
+// import {IoHelpCircleOutline} from 'react-icons/io5/index'
+// import {FiLogOut} from 'react-icons/fi/index'
 import * as CONSTANTS from '../constants';
 import { isLoggedIn } from 'stores/authStore'
 import { Cookies } from 'react-cookie'
@@ -19,13 +19,13 @@ function SideNav({activeMenu}: SideNavProp) {
 
     const renderIcon = (iconName: any, title: string) => {
         const icons: any = {
-            "AiFillHome": AiFillHome,
-            "AiOutlineFileText": AiOutlineFileText,
-            "TbMessages": TbMessages,
-            "MdOutlinePersonOutline": MdOutlinePersonOutline
+            "AiFillHome": 'fa fa-home',
+            "AiOutlineFileText": 'fa fa-file',
+            "TbMessages": 'fa fa-envelope',
+            "MdOutlinePersonOutline": 'fa fa-user'
         }
-        const IconComponent = icons[iconName]
-        return <IconComponent  className={`text-xl ${activeTab.toLowerCase() === title.toLowerCase() ? ' text-blue-500' : ''}`} />
+        // const IconComponent = icons[iconName]
+        return <i  className={`text-sm ${icons[iconName]} ${activeTab.toLowerCase() === title.toLowerCase() ? ' text-blue-500' : ''}`} ></i>
     }
 
     const logout = () => {
@@ -49,7 +49,7 @@ function SideNav({activeMenu}: SideNavProp) {
                                     key={data.title}
                                 >
                                     <div className='flex flex-col items-center '>
-                                        <div className={`p-2.5 rounded-full ${activeTab.toLowerCase() === data.title.toLowerCase() ? ' bg-white' : 'bg-gray-200	'}  `}>
+                                        <div className={` h-10 w-10 flex items-center justify-center rounded-full ${activeTab.toLowerCase() === data.title.toLowerCase() ? ' bg-white' : 'bg-gray-200	'}  `}>
                                             {/* <AiFillHome className={`text-xl ${activeTab.toLowerCase() === data.title.toLowerCase() ? ' text-blue-500' : ''}`} /> */}
                                             {renderIcon(data.icon, data.title)}
                                         </div>
@@ -63,8 +63,8 @@ function SideNav({activeMenu}: SideNavProp) {
                     </Sidebar.ItemGroup>
                 </Sidebar.Items>
                 <div className='flex flex-col items-center justify-center absolute bottom-24 left-0 right-0'>
-                    <IoHelpCircleOutline className='text-2xl cursor-pointer' />
-                    <FiLogOut onClick={() =>  logout()} className='text-xl mt-6 hover:text-red-500 cursor-pointer' />
+                    {/* <IoHelpCircleOutline className='text-2xl cursor-pointer' />
+                    <FiLogOut onClick={() =>  logout()} className='text-xl mt-6 hover:text-red-500 cursor-pointer' /> */}
 
                 </div>
             </Sidebar>

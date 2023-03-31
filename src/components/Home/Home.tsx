@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Card, Button } from 'flowbite-react'
-import { RiArrowRightSLine } from 'react-icons/ri/index'
+// import { RiArrowRightSLine } from 'react-icons/ri/index'
 import { isLoggedIn } from 'stores/authStore';
 import { useStore } from '@nanostores/react';
 
@@ -36,7 +36,8 @@ function Home() {
           </Card>
           <div className='flex items-center'>
             <div className='bg-blue-100 hover:bg-blue-200 rounded-full cursor-pointer	 flex	items-center justify-center h-10 w-10'>
-              <RiArrowRightSLine className="text-xl  text-gray-800" />
+              {/* <RiArrowRightSLine className="text-xl  text-gray-800" /> */}
+              <i className='fa fa-angle-right	'></i>
             </div>
           </div>
 
